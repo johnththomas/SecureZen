@@ -34,7 +34,16 @@
     + See History of scans performed
     + Use postgreSQL
 
+**Installation:**
+
+* Clone the repository:
+* Navigate to the project directory:
+* Activate virtual env (security)
+* Install dependencies:
+* Run migrations:
+* Start the Django server:
+* Access the application in your web browser at http://127.0.0.1:8000/.
+
 **Acknowledgement:**
 
-VirusTotal API
-
+* VirusTotal API
