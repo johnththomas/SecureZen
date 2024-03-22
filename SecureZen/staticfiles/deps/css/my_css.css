@@ -1,0 +1,155 @@
+body {
+  background-image: radial-gradient(circle farthest-corner at center, #1C262B 0%, #adc9d6 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  background-color: azure;
+}
+
+html {
+  height: 100%;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.custom-shadow {
+  box-shadow: 5px 5px 25px 19px #000000;
+}
+
+.product_id {
+  color: gray;
+  font-size: 15px;
+}
+
+.badge.bg-warning.text-dark {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  z-index: 1;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 15px 9px #000000;
+}
+
+.badge-banner {
+  top: 80%;
+  border-radius: 15px;
+  font-size: 0.7rem;
+}
+
+.text-black {
+  color: black; /* Change 'black' to the desired color */
+}
+
+.container .row .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center button vertically */
+  align-items: center; /* Center button horizontally */
+  margin-bottom: 20px; /* Spacing between buttons */
+  text-align: center; /* Center text horizontally */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 80%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 5px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  width: 80%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 5px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+/* Hover effects */
+.btn:hover {
+  opacity: 0.9;
+  color: #fff; /* Changes text color to black on hover */
+  background-color: #000; /* Example: Changes background color to red on hover */
+}
+
+/* Custom styling for the close button in the modal */
+.btn-close-custom1 {
+  /*background-color: #f00; /* Red background */
+  color: #fff; /* White text */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding around the text */
+}
+
+.btn-close-custom2 {
+  /* Your custom styles here */
+  /*background-color: #f00; /* Example: red background */
+  color: #fff; /* Example: white text */
+  border-radius: 4px; /* Example: rounded corners */
+  padding: 0.5rem 1rem; /* Example: padding around the text */
+}
+
+.btn-primary1 {
+  background-color: rgb(95, 50, 89);
+  border-color: rgb(95, 50, 89);
+  width: 30%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 15px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.btn-primary2 {
+  background-color: rgb(95, 50, 89);
+  border-color: rgb(95, 50, 89);
+  width: 30%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 15px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+#home_page_logo {
+  display: block;
+  margin: 0 auto;
+  width: 250px; /* Image will not exceed its container width */
+  height: 250px; /* Image will not exceed 200px in height */
+}
+
+/* Default styles */
+.container {
+  overflow: auto; /* Enable scrolling if content overflows */
+  width: 100%; /* Full width container */
+}
+
+/* Tablet styles (up to 768px) */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%; /* Adjust container width for tablets */
+  }
+}
+
+/* Mobile styles (up to 576px) */
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 100%; /* Full width container for mobile */
+    padding: 0 10px; /* Add some padding for better readability */
+  }
+}
+
+/* Large screen styles (greater than 1200px) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px; /* Set a maximum width for large screens */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+}

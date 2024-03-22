@@ -1,0 +1,28 @@
+<!-- Displaying a heading for the URL scan section -->
+<h2>URL Scan</h2>
+
+<!-- Creating a form for users to submit URLs for scanning. The form uses POST method to submit data securely. -->
+<form method="post">
+    <!-- Django template tag to prevent CSRF attacks by including a token in the form. It's crucial for security. -->
+    {% csrf_token %}
+    <!-- Input field for users to enter the URL they want to scan, with a placeholder text. -->
+    <input type="url" name="url" placeholder="Enter URL">
+    <!-- A submit button for the form. When clicked, it submits the form data. -->
+    <button type="submit">Scan URL</button>
+</form>
+
+<!-- Checking if there is a scan result to display. The scan_result variable is provided by the view. -->
+{% if scan_result %}
+    <!-- Displaying a heading for the scan report section if there is a scan result. -->
+    <h2>Scan Report</h2>
+    <!-- Displaying the scan result. The |safe filter tells Django not to escape HTML if the scan result contains it. -->
+    <pre>{{ scan_result|safe }}</pre>
+{% endif %}
+
+<!-- Checking if there is an error message to display. The error variable is provided by the view. -->
+{% if error %}
+    <!-- Displaying the error message in red text. The style attribute is used to change the text color to red. -->
+    <p style="color: red;">Error: {{ error }}</p>
+{% endif %}
+
+

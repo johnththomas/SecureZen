@@ -1,0 +1,77 @@
+.loader {
+    z-index: 1000; /* This places the .loader element on top of other positioned elements that might have a lower z-index value. */
+    position: absolute; /*This takes the .loader element out of the normal document flow and positions it 
+    absolutely in relation to its closest positioned ancestor (or the <body> if there is none). */
+    top: calc(50% - 32px); /* This places the top of the loader at the center of the container, minus 32 pixels 
+    to account for half the height of the loader, effectively centering it vertically. */
+    left: calc(50% - 32px); /*Similar to the top property, this centers the loader horizontally. */
+    width: 64px; /* Sets the width of the loader.*/
+    height: 64px; /*Sets the height of the loader.*/
+    border-radius: 50%; /* This gives the loader a circular shape.*/
+    perspective: 800px; /* This property is used to give a 3D-positioned element some perspective. 
+    It defines how far the object is away from the user. This can be useful if you're using 3D transforms on the .inner elements.*/
+  }
+
+  .hide{
+    display:none;
+  }
+
+  .show{
+    display:block;
+  }
+
+  .inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 3px solid #fff;
+  }
+  
+  .inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 3px solid #fff;
+  }
+  
+  .inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 3px solid #fff;
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }

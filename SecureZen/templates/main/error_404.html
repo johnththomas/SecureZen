@@ -1,0 +1,35 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans '404 Error' %}
+{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'deps/css/error_404.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="error-image">
+    <div class="container">
+      <div class="text text-white">
+        <h1>{% trans 'Something went wrong'%}</h1>
+        <p>{% trans 'Please check the URL for any typos'%}.</p>
+        {% comment %} <div class="input-box">
+          <input type="text" placeholder="{% trans 'Search...' %}">
+          <button><i class="fa-solid fa-search"></i></button>
+        </div> {% endcomment %}
+        <ul class="menu">
+          <li><a class="navbar-brand" href="{% url 'secure:index' %}">{% trans "Home" %}</a></li>
+          {% comment %} <li><a class="navbar-brand" href="{% url 'scanner:scan-url' %}" >{% trans 'Go to Scan URL' %}</a></li>
+          <li><a class="navbar-brand" href="{% url 'scanner:upload' %}" >{% trans 'Go to Upload' %}</a></li> {% endcomment %}
+        </ul>
+      </div>
+      <div class="error-image">
+          <img src="{% static 'deps/images/error_404.jpeg' %}" alt="{% trans 'Error' %}">
+      </div>
+    </div>
+</section>
+{% endblock %}

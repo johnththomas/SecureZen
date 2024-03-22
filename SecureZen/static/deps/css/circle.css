@@ -1,0 +1,61 @@
+.circle.green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 250px; /* Adjust based on your needs */
+    height: 250px; /* Adjust based on your needs */
+    background: #fff;
+    border: 25px solid #28a745; /* Green border for no breaches */
+    color: #333; /* Text color */
+    font: 3vw Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Optional: Adjust line height if your text spans multiple lines */
+.circle span {
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 10px; /* Ensures text doesn't touch the edges */
+}
+  
+.circle.red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 250px; /* Adjust based on your needs */
+    height: 250px; /* Adjust based on your needs */
+    background: #fff;
+    border: 25px solid #dc3545; /* Red border for breaches found */
+    color: #333; /* Text color */
+    font: 3vw Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 768px) {
+    .circle.red {
+        width: 50vw; /* Larger percentage of the viewport width */
+        height: 50vw; /* Maintain aspect ratio */
+        font-size: 5vw; /* Slightly larger text for readability */
+        border-width: 4vw; /* Adjust border thickness */
+    }
+    .circle.green {
+        width: 50vw; /* Larger percentage of the viewport width */
+        height: 50vw; /* Maintain aspect ratio */
+        font-size: 5vw; /* Slightly larger text for readability */
+        border-width: 4vw; /* Adjust border thickness */
+    }
+}
+
+
+

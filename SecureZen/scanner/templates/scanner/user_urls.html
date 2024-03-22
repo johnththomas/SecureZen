@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Scanned URLs' %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/my_css.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 pt-5 text-white">
+    <h2>{{ user.username }}'s Scanned URLs</h2>
+    {% if urls %}
+    <ul>
+        {% for url in urls %}
+            <li>
+                <strong>{{ url.url }}</strong> 
+                <br>
+                    - Scanned at: {{ url.scanned_at }}
+                <br>
+                {% if url.scan_result %}
+                    - Scan ID: {{ url.scan_result.scan_id }}<br>
+                    - Total trials: {{ url.scan_result.total }}<br>
+                    - Threats: {{ url.scan_result.positives }}<br>
+                   
+                {% else %}
+                    Scan Result: Not available
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No URLs have been scanned by {{ user.username }}.</p>
+    {% endif %}
+</div>
+{% endblock %}

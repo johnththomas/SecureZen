@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock %}
+
+{% block content1 %}
+    <div class="container mt-4 mb-4"> <!-- Added mb-5 for margin-bottom -->
+        <h3 class="text-center text-white"><strong>{{ title }}</strong></h3>
+    </div>
+{% endblock %}
+
+{% block content2 %}
+    <div class="container mt-4 mb-5"> <!-- Added mb-5 for margin-bottom -->
+        <img src="{% static "deps/images/1.png" %}" alt="{% trans 'Logo' %}" id="home_page_logo">
+        <h4 class="text-center text-white"><strong>{{ content |linebreaks }}</strong></h4>
+    </div>
+{% endblock %}

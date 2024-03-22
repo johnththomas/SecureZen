@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Scanned Files' %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/my_css.css' %}">
+    <!-- Ensure Bootstrap is included for modals -->
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 pt-5 text-white">
+    <h2>{{ user.username }}'s Uploaded Files</h2>
+
+    {% if files %}
+        <ul>
+            {% for file in files %}
+                <li>
+                    <strong>{{ file.file_name }}</strong> <br>
+                    - Uploaded at: {{ file.uploaded_at }}<br>
+                    {% if file.scan_result %}
+                        - Scan ID: {{ file.scan_result.scan_id }}<br>
+                        - Total trials: {{ file.scan_result.total }}<br>
+                        - Threats: {{ file.scan_result.positives }}<br>
+                    {% else %}
+                        Scan Result: Not available
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No files have been uploaded by {{ user.username }}.</p>
+    {% endif %}
+</div>
+{% endblock %}

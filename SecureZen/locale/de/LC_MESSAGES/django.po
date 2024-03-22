@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-13 00:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: freezing/models.py:20
+msgid "groups"
+msgstr ""
+
+#: freezing/models.py:22
+msgid ""
+"The groups this user belongs to. A user will get all permissions granted to "
+"each of their groups."
+msgstr ""
+
+#: freezing/models.py:28
+msgid "user permissions"
+msgstr ""
+
+#: freezing/models.py:30
+msgid "Specific permissions for this user."
+msgstr ""
+
+#: freezing/views.py:40
+msgid "URL Shortening Service - Home"
+msgstr ""
+
+#: freezing/views.py:41
+msgid ""
+"Welcome to our URL Shortening Service. Easily shorten your URLs and track "
+"their performance. Choose between immediate redirection or an ad-supported "
+"version for additional benefits."
+msgstr ""
+
+#: freezing/views.py:47 templates/main/base.html:39
+msgid "Contact Information"
+msgstr ""
+
+#: freezing/views.py:48
+msgid ""
+"\n"
+"            - Address: [Your Address Here]\n"
+"            \n"
+"            - Telephone: [Your Telephone Number Here]\n"
+"            \n"
+"            - Fax: [Your Fax Number Here]\n"
+"            \n"
+"            - Email: [Your Email Here]\n"
+"        "
+msgstr ""
+
+#: freezing/views.py:62
+msgid "About Our Service"
+msgstr ""
+
+#: freezing/views.py:63
+msgid "Understanding Our URL Shortening and Advertising Service"
+msgstr ""
+
+#: freezing/views.py:64
+msgid ""
+"\n"
+"            Our service provides a fast and efficient way to shorten URLs. "
+"Here's how it works:\n"
+"\n"
+"            - **URL Shortening**: Submit your long URL and receive a "
+"shortened version. This makes sharing easier and more efficient.\n"
+"\n"
+"            - **Advertisement Interstitial**: Optionally, the shortened URL "
+"can redirect through an advertisement page, displaying ads for a few seconds "
+"before reaching the original URL. This model supports our service and offers "
+"benefits to users who opt-in.\n"
+"\n"
+"            - **Skip Ads Option**: For a small fee, users can choose to "
+"bypass the advertisement interstitial, directly reaching their destination "
+"URL without any delay.\n"
+"\n"
+"            - **Benefits of Using Our Service**: Besides shortening URLs, "
+"our service offers tracking capabilities, allowing you to see the number of "
+"clicks and other relevant metrics. This is invaluable for marketing and "
+"tracking the effectiveness of your links.\n"
+"\n"
+"            We are committed to providing a valuable service that enhances "
+"your online experience, whether through efficient URL management or optional "
+"advertisement viewing for additional benefits.\n"
+"        "
+msgstr ""
+
+#: templates/main/base.html:21 templates/main/base.html:27
+msgid "Home"
+msgstr ""
+
+#: templates/main/base.html:36
+msgid "About Us"
+msgstr ""
+
+#: templates/main/base.html:45
+msgid "Log in"
+msgstr ""
+
+#: templates/main/base.html:48 templates/users/registration.html:10
+msgid "Registration"
+msgstr ""
+
+#: templates/main/base.html:61
+msgid "Enter URL to shorten"
+msgstr ""
+
+#: templates/main/base.html:63
+msgid "Shorten URL"
+msgstr ""
+
+#: templates/main/base.html:76
+msgid "Copyright &copy; YDM1985 & Businka23 2023"
+msgstr ""
+
+#: templates/main/index.html:16
+msgid "Copyright &copy; Businka 2023"
+msgstr ""
+
+#: templates/users/login.html:10 templates/users/login.html:32
+msgid "Login"
+msgstr ""
+
+#: templates/users/login.html:18
+msgid "Username"
+msgstr ""
+
+#: templates/users/login.html:21 templates/users/registration.html:41
+msgid "Enter your username"
+msgstr ""
+
+#: templates/users/login.html:26
+msgid "Password"
+msgstr ""
+
+#: templates/users/login.html:28 templates/users/registration.html:63
+msgid "Enter your password"
+msgstr ""
+
+#: templates/users/login.html:36
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/users/login.html:36
+msgid "Create an account"
+msgstr ""
+
+#: templates/users/profile.html:12
+msgid "User Profile"
+msgstr ""
+
+#: templates/users/profile.html:72
+msgid "Save Changes"
+msgstr ""
+
+#: templates/users/registration.html:16
+msgid "First Name*"
+msgstr ""
+
+#: templates/users/registration.html:19
+msgid "Enter your first name"
+msgstr ""
+
+#: templates/users/registration.html:27
+msgid "Last Name*"
+msgstr ""
+
+#: templates/users/registration.html:30
+msgid "Enter your last name"
+msgstr ""
+
+#: templates/users/registration.html:38
+msgid "Username*"
+msgstr ""
+
+#: templates/users/registration.html:49
+msgid "Email*"
+msgstr ""
+
+#: templates/users/registration.html:52
+msgid "Enter your email"
+msgstr ""
+
+#: templates/users/registration.html:60
+msgid "Password*"
+msgstr ""
+
+#: templates/users/registration.html:71
+msgid "Confirm Password*"
+msgstr ""
+
+#: templates/users/registration.html:74
+msgid "Confirm your password"
+msgstr ""
+
+#: templates/users/registration.html:81
+msgid "Register"
+msgstr ""
+
+#: windy/settings.py:157
+msgid "English"
+msgstr ""
+
+#: windy/settings.py:158
+msgid "Deutsch"
+msgstr ""

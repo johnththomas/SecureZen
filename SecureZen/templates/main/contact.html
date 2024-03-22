@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+    <!-- Your custom styles can go here if not in a separate CSS file -->
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4 pt-2">
+        <h3 class="text-left text-white"><strong>{{ title }}</strong></h3>
+        <h4 class="text-left text-white"><strong>{{ text_on_page |linebreaks }}</strong></h4>
+    </div>
+{% endblock %}

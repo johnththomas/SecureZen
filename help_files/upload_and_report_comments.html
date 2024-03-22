@@ -1,0 +1,27 @@
+<!-- Displaying a heading for the file upload section -->
+<h2>File Upload</h2>
+
+<!-- Creating a form for users to submit files. The form uses POST method to ensure data is sent securely.
+     The enctype attribute specifies how the form data should be encoded when submitting it.
+     'multipart/form-data' is used when a form requires file uploads. -->
+<form method="post" enctype="multipart/form-data">
+    <!-- Django template tag to prevent CSRF (Cross Site Request Forgery) attacks by including a hidden token in the form.
+         This is crucial for maintaining the security of the form submission. -->
+    {% csrf_token %}
+    <!-- Input field for users to select the file they want to upload. 
+         The 'name' attribute is important as it is used to access the file in the Django backend. -->
+    <input type="file" name="document">
+    <!-- A submit button for the form. When clicked, it sends the form data (including the selected file) to the server. -->
+    <button type="submit">Upload</button>
+</form>
+
+<!-- Checking if there is a scan result available to display. The scan_result variable is provided by the Django view. -->
+{% if scan_result %}
+    <!-- Displaying a heading for the scan report section if a scan result is available. -->
+    <h2>Scan Report</h2>
+    <!-- Placeholder comment where the actual scan result will be displayed. 
+         The 'pre' tag is used to preserve the formatting of the scan result. -->
+    <!-- The '|safe' filter is used with the 'scan_result' variable to display HTML content without Django escaping it.
+         This is useful when the scan result contains HTML that should be rendered in the browser. -->
+    <pre>{{ scan_result|safe }}</pre>
+{% endif %}

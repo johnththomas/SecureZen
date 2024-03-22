@@ -1,0 +1,80 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'upload and report' %}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/circle.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+    <link rel="stylesheet" href="{% static 'deps/css/my_css.css' %}">
+    <!-- Ensure Bootstrap is included for modals -->
+    <link rel="stylesheet" href="{% static 'deps/css/moves.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{% trans 'File Upload' %}</h2>
+    <form id="myForm" method="post" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="file" class="form-control" name="document" id="formFile">
+        </div>
+        <button class="btn btn-primary1 text-white" type="submit">{% trans 'Upload' %}</button>
+    </form>
+
+    {% if scan_result %}
+        <div id="result">
+            <h2 id="scan-report-summary">{% trans 'Scan Report Summary' %}</h2>
+            <!-- Display Circles for Total Vendors and Breaches Found -->
+            <div class="circle {% if breaches_found > 0 %}red{% else %}green{% endif %}" id="vendorsBreachesCircle"> 
+                {{ breaches_found }} / {{ total_vendors }}
+            </div>
+            <!-- Trigger Button for Full Report Modal -->
+            <button id="fullReportButton" type="button" class="btn btn-primary2 text-white" data-bs-toggle="modal" data-bs-target="#fullReportModal">
+                Full Report
+            </button>
+
+            <!-- Full Report Modal -->
+            <div class="modal fade" id="fullReportModal" tabindex="-1" aria-labelledby="fullReportModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="fullReportModalLabel">{% trans 'Full Scan Report' %}</h5>
+                            <button type="button" class="btn-close btn-close-custom2" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <!-- Display detected items first -->
+                                {% for vendor, results in scan_result.scans.items %}
+                                    {% if results.detected %}
+                                        <li class="text-danger">{{ vendor }} : Detected: {{ results.detected }}, Result: {{ results.result }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                <!-- Display non-detected items afterwards -->
+                                {% for vendor, results in scan_result.scans.items %}
+                                    {% if not results.detected %}
+                                        <li class="text-success">{{ vendor }} : Detected: {{ results.detected }}, Result: {{ results.result }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    {% elif error %}
+        <p class="text-danger">{% trans 'Error' %}: {{ error }}</p>
+    {% endif %}
+    <div id='uploader' class='loader' style="display:none;">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+    </div>  
+</div>
+{% endblock %}
+
+

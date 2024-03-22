@@ -1,0 +1,150 @@
+body {
+  background-image: radial-gradient(circle farthest-corner at center, #364952 0%, #253238 50%, #1C262B 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh; /* use viewport height to ensure full coverage */
+  margin: 0; /* Reset default margin */
+  background-color: azure; /* This will show before the gradient loads or if the gradient fails */
+}
+
+html {
+  height: 100%;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.custom-shadow {
+  box-shadow: 5px 5px 25px 19px #000000;
+}
+
+.product_id {
+  color: gray;
+  font-size: 15px;
+}
+
+.badge.bg-warning.text-dark {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  z-index: 1;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 15px 9px #000000;
+}
+
+.badge-banner {
+  top: 80%;
+  border-radius: 15px;
+  font-size: 0.7rem;
+}
+
+.text-black {
+  color: black; /* Change 'black' to the desired color */
+}
+
+h2 {
+  color: white;
+}
+
+.container .row .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center button vertically */
+  align-items: center; /* Center button horizontally */
+  margin-bottom: 20px; /* Spacing between buttons */
+  text-align: center; /* Center text horizontally */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 80%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 5px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  width: 80%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 5px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+/* Hover effects */
+.btn:hover {
+  opacity: 0.9;
+  color: #fff; /* Changes text color to black on hover */
+  background-color: #000; /* Example: Changes background color to red on hover */
+}
+
+/* Custom styling for the close button in the modal */
+.btn-close-custom1 {
+  /*background-color: #f00; /* Red background */
+  color: #fff; /* White text */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding around the text */
+}
+
+.btn-close-custom2 {
+  /* Your custom styles here */
+  /*background-color: #f00; /* Example: red background */
+  color: #fff; /* Example: white text */
+  border-radius: 4px; /* Example: rounded corners */
+  padding: 0.5rem 1rem; /* Example: padding around the text */
+}
+
+.btn-primary1 {
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 30%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 15px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.btn-primary2 {
+  background-color: #007bff;
+  border-color: #007bff;
+  width: 30%; /* Set the width of buttons */
+  padding: 10px 0; /* Padding for top and bottom */
+  font-size: 18px; /* Larger text size */
+  border-radius: 15px; /* Slightly rounded corners for aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+#home_page_logo {
+  display: block;
+  margin: 0 auto;
+  width: 250px; /* Image will not exceed its container width */
+  height: 250px; /* Image will not exceed 200px in height */
+}
+
+#logo {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 50px;
+  width: 15px; /* Image will not exceed its container width */
+  height: 15px; /* Image will not exceed 200px in height */
+}
+
+#scan-report-summary {
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
